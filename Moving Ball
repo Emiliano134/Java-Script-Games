@@ -1,0 +1,33 @@
+let x = 200;
+let y = 200;
+let shouldMoveRight = true;
+
+// Runs once
+function setup() {
+  createCanvas(400, 400);
+  noStroke();
+  frameRate(30); // don't change me
+}
+
+// Runs until program ends (forever)
+function draw() {
+  // Makes a blue background
+  background(52, 174, 235);
+  
+  // Draws the ball (at the center of the canvas)
+  ellipse(x, y, 50, 50);
+  
+  if (shouldMoveRight) {
+    // Move the ellipse to the right by 8 pixels
+    x = x + 8;
+  } else {
+    // Move the ellipse to the left by 8 pixels
+    x = x - 8
+  }
+  
+  if (x > width) {
+    shouldMoveRight = false;
+  }  
+}
+
+
