@@ -1,0 +1,48 @@
+/*
+ * Author(s):Emiliano Gonzalez
+ * Date: 10/6/2021
+ * Project Description: Creative Coding(emoji)  
+*/
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255)
+  fill(255,0,0)
+  stroke(20);
+  strokeWeight(5)
+  ellipse(200,200,300);
+ 
+
+  
+
+//BLACK semi-circles
+noStroke();
+  fill(0,0,0)
+   arc(180,200,225,250,PI/2,3*PI/2,PIE)
+arc(220,200,225,250,3*PI/2,PI/2,PIE)
+  
+//eyes
+noStroke();
+  fill(255,255,255)
+   arc(125,200,100,100,0,PI,PIE)
+arc(277,200,100,100,0,PI,PIE)
+  
+// Change the eyes depending on whether the mouse is pressed
+  if (mouseIsPressed) {
+     fill(255,255,255);
+    //white
+    ellipse(130, 210, 110,90);
+    ellipse(280, 210, 110,90);
+    fill(0,0,0)
+    //black
+    ellipse(280, 210, 30);
+    ellipse(130, 210, 30);}
+  else {
+    arc(125,200,100,100,0,PI,PIE)
+arc(277,200,100,100,0,PI,PIE)
+  }
+  
+  }
