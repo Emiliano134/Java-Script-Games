@@ -1,0 +1,64 @@
+let x = 200;
+let y = 200;
+let shouldMoveRight = true; 
+let shouldMoveLefy= true;
+let shouldMoveUp= true; 
+let img;
+
+    
+// Runs once
+function setup() {
+  "Hello Emiliano Gonzalez"
+  createCanvas(400, 400);
+  noStroke();
+  frameRate(30); // don't change me
+  img= loadImage("png-transparent-assassination-of-julius-caesar-ancient-rome-roman-republic-roman-empire-others-head-ancient-history-statue-thumbnail.png")
+}
+
+// Runs until program ends (forever)
+
+function draw() {
+  background(52, 174, 235);
+  
+  //ellipse(x, y, 50, 50);
+  image(img,x,y, 200, 200)
+  if (shouldMoveRight) {
+    // Move the ellipse to the right by 8 pixels
+    x = x + 8;
+  } else {
+    // Move the ellipse to the left by 8 pixels
+    x = x - 8
+  }
+  
+  //stops the ellipse from moving to the right off the screen
+  if (x > width) {
+    shouldMoveRight = false;
+    }  
+  
+  //When we reach the left side of the canvas:
+  if(x<0){
+    //stop
+    //move to the right
+    shouldMoveRight= true; 
+  }
+  
+  //When we reacvh 
+}
+
+
+
+
+
+
+
+
+
+
+// Other notes from last time:
+// 
+// * x needs to be a variable so that it shows up in a different spot each time it is drawn
+// * move ball in small steps so that we see a smooth animation
+// * if (x > width)
+// * ellipse stops at some x value and then moves in other direction
+// * know when ellipse has reached other side of screen using coordinate calculations
+// * need to use the canvas's actual width
